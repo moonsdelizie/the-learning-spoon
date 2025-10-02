@@ -1,13 +1,13 @@
 enable: true
 
-title: "How to **level up** your business"
-text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est faucibus tellus leo non pellentesque lorem vel. Arcu magna eros, potenti duis."
+title: "The **Learning Spoon** Academy - Cooking & Culture Workshops"
+text: "Where young chefs explore the world through food, culture, and community. At The Learning Spoon Academy, we believe every recipe tells a story. Our kids' cooking classes bring together hands-on cooking, cultural studies, geography, and teamwork — designed with homeschooling families in mind. Children don't just learn how to cook; they learn how to connect with the world."
 
 buttons:
   - label: "How we work"
-    link: "#"
+    url: "/post/classes/"
 
   - label: "Let's talk"
-    link: ""
+    url: "/post/about/#let-us-talk"
 
-image: "images/hero-image.png"
+image: "images/academy.png"

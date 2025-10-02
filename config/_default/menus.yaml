@@ -3,25 +3,21 @@ main:
     url: "/#hero"
     weight: 1
 
-  - name: "How we work"
-    url: "/#"
+  - name: "Classes"
+    url: "/post/classes"
     weight: 2
 
-  - name: "Our team"
-    url: "/#"
+  - name: "About"
+    url: "/post/about"
     weight: 3
 
-  - name: "Pricing"
-    url: "/#"
+  - name: "Homeschool Hub"
+    url: "/post/about/#homeschool-hub"
     weight: 4
 
-  - name: "Blog"
-    url: "/blog"
-    weight: 5
-
 buttons:
-  - name: "Book a call"
-    url: "/#"
+  - name: "Let's talk"
+    url: "/post/about/#let-us-talk"
     weight: 5
 
 footer:
@@ -29,18 +25,14 @@ footer:
     url: "/#hero"
     weight: 1
 
-  - name: "How we work"
-    url: "/#"
+  - name: "Classes"
+    url: "/post/classes"
     weight: 2
 
-  - name: "Our team"
-    url: "/#"
+  - name: "About"
+    url: "/post/about"
     weight: 3
 
-  - name: "Pricing"
-    url: "/#"
-    weight: 4
-
-  - name: "Blog"
-    url: "/blog"
-    weight: 5
+  # - name: "Homeschool Hub"
+  #   url: "/post/about/#homeschool-hub"
+  #   weight: 4

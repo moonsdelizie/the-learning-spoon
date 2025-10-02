@@ -1,9 +1,9 @@
-title: "Up Business"
-description: "We specialize in providing services to desing websites, applications, build and maintain business for customers."
+title: "Moon's Delizie"
+description: "We use cooking as a powerful tool to teach kids how to connect with the world around them."
 images: 
   - "images/hero-image.png"
 
-logo: "arrow-up.png"
+logo: "../assets/images/logo.png"
 
 favicons:
   themeColor: "#FFFFFF"
@@ -11,18 +11,15 @@ favicons:
   faviconColor: "#000000"
 
 social:
-  dribbble: "#"
-  instagram: "#"
-  facebook: "#"
-  twitter: "#"
+  instagram: "https://www.instagram.com/moonsdelizie/"
+  
 
 location:
-  - "3891 Ranchview Dr. Richardson, California 62639"
-  - "4517 Washington Ave. Manchester, Kentucky 39495"
+  - "Murrieta, California 92563"
 
 contact:
-  - "trungkienspktnd@gamail.com"
-  - "207.555.0119"
+  - "amaniaseel@hotmail.com"
+  - "619.807.4383"
 
-copyright: "© 2022 Up Business All Rights Reserved"
+copyright: "© 2025 MoonsDelizie All Rights Reserved"
 

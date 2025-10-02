@@ -1,4 +1,4 @@
-enable: true
+enable: false
 
 title: "We work with customers brands and startups "
 items:
@@ -7,3 +7,4 @@ items:
   - "images/brands-adobe.png"
   - "images/brands-spotify.png"
   - "images/brands-dropbox.png"
+  - "images/brands-paypal.png"

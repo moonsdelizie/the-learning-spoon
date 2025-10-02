@@ -1,25 +1,25 @@
 enable: true
 
-title: "Our main services"
-text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec quam nibh elit pellentesque velit netus suspendisse. Sed enim, pretium, montes, in ut dolor urna."
+title: "Our Classes"
+text: "Explore our diverse range of cooking classes designed to inspire and educate young chefs. Each class is thoughtfully crafted to combine culinary skills with cultural insights, fostering a love for cooking and global awareness."
 cards:
-  - image: "images/services-web-development.png"
-    title: "Web development"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent. "
+  - image: "images/classes-options.png"
+    title: "Class Options"
+    text: "Our classes cater to various age groups, ensuring that every young chef finds their perfect fit. Classes are typically 2 hours long and designed for children aged 5-12."
     button:
       label: "Learn more"
-      link: "#"
+      link: "/post/classes/#class-options"
 
-  - image: "images/services-web-development.png"
-    title: "Web development"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent. "
+  - image: "images/classes-schedule.png"
+    title: "Class Schedule"
+    text: "Our classes follow a weekly schedule, allowing young chefs to plan their culinary adventures. Each week features a new theme, ensuring a fresh and engaging experience."
     button:
       label: "Learn more"
-      link: "#"
+      link: "/post/classes/#class-schedule"
 
-  - image: "images/services-web-development.png"
-    title: "Web development"
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie in malesuada eget fames purus ligula luctus tellus. Habitant condimentum sit gravida praesent. "
+  - image: "images/promise.png"
+    title: "Allergy-Friendly Promise"
+    text: "Our classes are designed with inclusivity in mind. We accommodate various dietary restrictions and allergies, ensuring a safe and enjoyable cooking experience for every child."
     button:
       label: "Learn more"
-      link: "#"
+      link: "/post/classes/#allergy-friendly-promise"
