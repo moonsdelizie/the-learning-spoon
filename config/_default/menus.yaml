@@ -17,7 +17,7 @@ main:
 
 buttons:
   - name: "Let's talk"
-    url: "/post/about/#let-us-talk"
+    url: "/#contact"
     weight: 5
 
 footer:
@@ -32,7 +32,3 @@ footer:
   - name: "About"
     url: "/post/about"
     weight: 3
-
-  # - name: "Homeschool Hub"
-  #   url: "/post/about/#homeschool-hub"
-  #   weight: 4

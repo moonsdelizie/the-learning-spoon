@@ -8,6 +8,6 @@ buttons:
     url: "/post/classes/"
 
   - label: "Let's talk"
-    url: "/post/about/#let-us-talk"
+    url: "/#contact"
 
 image: "images/academy.png"

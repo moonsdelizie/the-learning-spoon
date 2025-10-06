@@ -21,9 +21,3 @@ The Learning Spoon Academy is built for homeschooling families:
 - Classes count toward Science, Math, Geography, and Cultural Studies.
 - Take-home recipe cards and worksheets extend learning beyond class.
 - Flexible weekday scheduling makes it easy to fit into your homeschool rhythm.
-
-## Let us talk
-
-Our classes are based on a kitchen located in Murrieta, California 92563.
-
-Please [email us](mailto:amaniaseel@hotmail.com) at for additional information and schedule your class!
