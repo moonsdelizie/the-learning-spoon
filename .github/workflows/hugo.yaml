@@ -64,7 +64,14 @@ jobs:
           echo "Node.js: $(node --version)"
       - name: Install Node.js dependencies
         run: |
-          [[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true
+          if [[ -f package-lock.json || -f npm-shrinkwrap.json ]]; then
+            npm ci
+          else
+            npm install
+          fi
+      #- name: Install Node.js dependencies
+      #  run: |
+      #    [[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true
       - name: Configure Git
         run: |
           git config core.quotepath false
@@ -76,8 +83,8 @@ jobs:
           key: hugo-${{ github.run_id }}
           restore-keys:
             hugo-
-      - name: Install TailwindCSS CLI
-        run: npm i -g tailwindcss
+      #- name: Install TailwindCSS CLI
+      #  run: npm i -g @tailwindcss/cli
       - name: Build the site
         run: |
           hugo \
