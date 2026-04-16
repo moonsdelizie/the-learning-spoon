@@ -76,6 +76,8 @@ jobs:
           key: hugo-${{ github.run_id }}
           restore-keys:
             hugo-
+      - name: Install TailwindCSS CLI
+        run: npm i -g tailwindcss
       - name: Build the site
         run: |
           hugo \
