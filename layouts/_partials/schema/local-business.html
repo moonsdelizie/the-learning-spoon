@@ -1,0 +1,45 @@
+{{ $b := .Site.Params.business }}
+{{ if $b }}
+  {{ $address := dict
+    "@type" "PostalAddress"
+    "addressLocality" $b.address.locality
+    "addressRegion" $b.address.region
+    "postalCode" $b.address.postalCode
+    "addressCountry" $b.address.country
+  }}
+
+  {{ $hours := dict
+    "@type" "OpeningHoursSpecification"
+    "dayOfWeek" (slice (printf "https://schema.org/%s" (index $b.hours.days 0)) (printf "https://schema.org/%s" (index $b.hours.days 1)))
+    "opens" $b.hours.opens
+    "closes" $b.hours.closes
+  }}
+
+  {{ $data := dict
+    "@context" "https://schema.org"
+    "@type" (slice "LocalBusiness" "EducationalOrganization")
+    "name" .Site.Title
+    "description" .Site.Params.description
+    "url" .Site.BaseURL
+    "areaServed" $b.areaServed
+    "priceRange" $b.priceRange
+    "address" $address
+    "openingHoursSpecification" (slice $hours)
+  }}
+
+  {{ with resources.Get "images/logo.png" }}
+    {{ $data = merge $data (dict "logo" .Permalink) }}
+  {{ end }}
+
+  {{ with resources.Get "images/academy.png" }}
+    {{ $data = merge $data (dict "image" .Permalink) }}
+  {{ end }}
+
+  {{ with .Site.Params.social.instagram }}
+    {{ $data = merge $data (dict "sameAs" (slice .)) }}
+  {{ end }}
+
+  <script type="application/ld+json">
+    {{ $data | jsonify (dict "indent" "  ") | safeJS }}
+  </script>
+{{ end }}

@@ -1,7 +1,7 @@
 title: "Moon's Delizie"
 description: "We use cooking as a powerful tool to teach kids how to connect with the world around them."
-images: 
-  - "images/hero-image.png"
+images:
+  - "images/academy.png"
 
 logo: "../assets/images/logo.png"
 
@@ -20,4 +20,19 @@ location:
 contact:
 
 copyright: "© 2025-present MoonsDelizie All Rights Reserved"
+
+business:
+  areaServed: "Murrieta, CA"
+  priceRange: "$60-$200"
+  address:
+    locality: "Murrieta"
+    region: "CA"
+    postalCode: "92563"
+    country: "US"
+  hours:
+    days:
+      - "Tuesday"
+      - "Thursday"
+    opens: "10:00"
+    closes: "12:00"
 
