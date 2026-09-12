@@ -4,6 +4,7 @@ title: "Our Classes"
 text: "Explore our diverse range of cooking classes designed to inspire and educate young chefs. Each class is thoughtfully crafted to combine culinary skills with cultural insights, fostering a love for cooking and global awareness."
 cards:
   - image: "images/classes-options.png"
+    imagealt: "Class Options badge with a wooden spoon and international flags"
     title: "Class Options"
     text: "Our classes cater to various age groups, ensuring that every young chef finds their perfect fit. Classes are typically 2 hours long and designed for children aged 5-12."
     button:
@@ -11,6 +12,7 @@ cards:
       link: "/post/classes/#class-options"
 
   - image: "images/classes-schedule.png"
+    imagealt: "Class Schedule icon of a calendar with a rainbow-colored spoon"
     title: "Class Schedule"
     text: "Our classes follow a weekly schedule, allowing young chefs to plan their culinary adventures. Each week features a new theme, ensuring a fresh and engaging experience."
     button:
@@ -18,6 +20,7 @@ cards:
       link: "/post/classes/#class-schedule"
 
   - image: "images/promise.png"
+    imagealt: "Allergy-Friendly Promise badge with a checkmark, almond, and peanut"
     title: "Allergy-Friendly Promise"
     text: "Our classes are designed with inclusivity in mind. We accommodate various dietary restrictions and allergies, ensuring a safe and enjoyable cooking experience for every child."
     button:
