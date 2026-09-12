@@ -39,6 +39,10 @@
     {{ $data = merge $data (dict "sameAs" (slice .)) }}
   {{ end }}
 
+  {{ with .Site.Params.legalName }}
+    {{ $data = merge $data (dict "alternateName" .) }}
+  {{ end }}
+
   <script type="application/ld+json">
     {{ $data | jsonify (dict "indent" "  ") | safeJS }}
   </script>

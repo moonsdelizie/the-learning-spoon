@@ -1,3 +1,3 @@
 ---
-title: "Moon's Delizie"
+title: "The Learning Spoon Academy"
 ---
