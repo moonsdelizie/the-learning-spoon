@@ -3,10 +3,6 @@ author = "Moon's Delizie"
 title = "Thank you!"
 date = "2025-09-27"
 description = ""
-tags = [
-    "markdown",
-    "text",
-]
 +++
 
 We sincerely appreciate you taking the time to reach out to us. Your message has been successfully submitted and received.

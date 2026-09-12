@@ -4,8 +4,8 @@ title = "Our Classes"
 date = "2025-09-27"
 description = "At The Learning Spoon Academy, food is our gateway to discovery."
 tags = [
-    "markdown",
-    "text",
+    "cooking classes",
+    "class schedule",
 ]
 +++
 
