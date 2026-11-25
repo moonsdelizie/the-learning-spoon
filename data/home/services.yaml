@@ -9,7 +9,7 @@ cards:
     text: "Our classes cater to various age groups, ensuring that every young chef finds their perfect fit. Classes are typically 2 hours long and designed for children aged 5-12."
     button:
       label: "Learn more"
-      link: "/post/classes/#class-options"
+      link: "/classes/#class-options"
 
   - image: "images/classes-schedule.png"
     imagealt: "Class Schedule icon of a calendar with a rainbow-colored spoon"
@@ -17,7 +17,7 @@ cards:
     text: "Our classes follow a weekly schedule, allowing young chefs to plan their culinary adventures. Each week features a new theme, ensuring a fresh and engaging experience."
     button:
       label: "Learn more"
-      link: "/post/classes/#class-schedule"
+      link: "/classes/#class-schedule"
 
   - image: "images/promise.png"
     imagealt: "Allergy-Friendly Promise badge with a checkmark, almond, and peanut"
@@ -25,4 +25,4 @@ cards:
     text: "Our classes are designed with inclusivity in mind. We accommodate various dietary restrictions and allergies, ensuring a safe and enjoyable cooking experience for every child."
     button:
       label: "Learn more"
-      link: "/post/classes/#allergy-friendly-promise"
+      link: "/classes/#allergy-friendly-promise"

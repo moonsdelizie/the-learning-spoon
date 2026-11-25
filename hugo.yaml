@@ -1,5 +1,4 @@
-theme: "github.com/writeonlycode/hugo-up-business"
-languageCode: "en-us"
+languageCode: "en-US"
 enableRobotsTXT: true
 
 build:

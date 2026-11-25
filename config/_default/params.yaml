@@ -24,6 +24,9 @@ copyright: "© 2025-present The Learning Spoon Academy, a Moon's Delizie brand. 
 business:
   areaServed: "Murrieta, CA"
   priceRange: "$60-$200"
+  # Uncomment and fill in to add them to the LocalBusiness structured data:
+  # telephone: "+1-951-555-0100"
+  # email: "hello@example.com"
   address:
     locality: "Murrieta"
     region: "CA"

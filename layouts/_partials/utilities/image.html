@@ -1,3 +1,16 @@
+{{/*
+  Responsive, optimized image.
+
+  Arguments:
+    src      (required) path in the page bundle or assets folder
+    alt      (required) alternative text
+    class    CSS classes for the <img>
+    sizes    value of the sizes attribute (default "100vw")
+    eager    true for above-the-fold images: no lazy loading, high fetch priority
+    media    media query; when set, the image is only downloaded when the query
+             matches (use it for images hidden at some breakpoints)
+*/}}
+
 {{/* Check for required arguments (src, alt): */}}
 {{ if not .src }}
   {{ errorf "Image Optimization: the partial 'utilities/image' is missing the 'src' argument." }}
@@ -13,33 +26,48 @@
 
 {{ if not $resource }}{{ errorf "Image Optimization: the image '%s' has not been found." .src }}{{ end }}
 
-{{/* Configure the image widths to be generated: */}}
-{{ $breakpoints := (slice 576 768 992 1200 1400) }}
-
-{{/* Generate the images: */}}
-{{ $images := slice }}
+{{/* Configure the image widths to be generated (plus the original width): */}}
+{{ $breakpoints := slice 320 576 768 992 1200 1400 }}
+{{ $widths := slice }}
 {{ range $breakpoints }}
-  {{ if (ge $resource.Width .) }}
-    {{ $opts := (printf "%dx webp" .) }}
-    {{ $image := $resource.Resize $opts }}
-    {{ $images = append $images (slice $image) }}
-  {{ end }}
+  {{ if lt . $resource.Width }}{{ $widths = $widths | append . }}{{ end }}
 {{ end }}
+{{ $widths = $widths | append $resource.Width }}
+
+{{/* Generate WebP versions: */}}
+{{ $images := slice }}
+{{ range $widths }}
+  {{ $images = $images | append ($resource.Resize (printf "%dx webp" .)) }}
+{{ end }}
+{{ $largest := index $images (sub (len $images) 1) }}
 
 {{/* Build the srcset: */}}
 {{ $srcset := slice }}
 {{ range $images }}
-  {{ $srcset = append $srcset (slice (printf "%s %dw" .Permalink .Width)) }}
+  {{ $srcset = $srcset | append (printf "%s %dw" .RelPermalink .Width) }}
 {{ end }}
 {{ $srcset = delimit $srcset ", " }}
+{{ $sizes := .sizes | default "100vw" }}
 
-{{/* Return the img element: */}}
+{{ $img := dict
+  "src" $largest.RelPermalink
+  "srcset" $srcset
+}}
+{{ if .media }}
+  {{/* Transparent 1x1 placeholder so nothing is downloaded when the media query does not match */}}
+  {{ $img = dict "src" "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" "srcset" "" }}
+{{ end }}
+
+{{/* Return the image element: */}}
+{{ if .media }}<picture><source media="{{ .media }}" srcset="{{ $srcset }}" sizes="{{ $sizes }}" type="image/webp" />{{ end }}
 <img
-  {{ with $resource.Permalink }}src="{{ . }}"{{ end }}
-  {{ with $resource.Width }}width="{{ . }}"{{ end }}
-  {{ with $resource.Height }}height="{{ . }}"{{ end }}
-  {{ with $srcset }}srcset="{{ . }}"{{ end }}
-  {{ with .sizes }}sizes="{{ . }}"{{ end }}
+  src="{{ $img.src | safeURL }}"
+  {{ with $img.srcset }}srcset="{{ . }}" sizes="{{ $sizes }}"{{ end }}
+  width="{{ $resource.Width }}"
+  height="{{ $resource.Height }}"
+  {{ if .eager }}fetchpriority="high"{{ else }}loading="lazy"{{ end }}
+  decoding="async"
   {{ with .class }}class="{{ . }}"{{ end }}
   alt="{{ .alt }}"
 />
+{{ if .media }}</picture>{{ end }}

@@ -8,9 +8,14 @@
     "addressCountry" $b.address.country
   }}
 
+  {{ $days := slice }}
+  {{ range $b.hours.days }}
+    {{ $days = $days | append (printf "https://schema.org/%s" .) }}
+  {{ end }}
+
   {{ $hours := dict
     "@type" "OpeningHoursSpecification"
-    "dayOfWeek" (slice (printf "https://schema.org/%s" (index $b.hours.days 0)) (printf "https://schema.org/%s" (index $b.hours.days 1)))
+    "dayOfWeek" $days
     "opens" $b.hours.opens
     "closes" $b.hours.closes
   }}
@@ -20,7 +25,8 @@
     "@type" (slice "LocalBusiness" "EducationalOrganization")
     "name" .Site.Title
     "description" .Site.Params.description
-    "url" .Site.BaseURL
+    "@id" (printf "%s#organization" site.Home.Permalink)
+    "url" site.Home.Permalink
     "areaServed" $b.areaServed
     "priceRange" $b.priceRange
     "address" $address
@@ -37,6 +43,14 @@
 
   {{ with .Site.Params.social.instagram }}
     {{ $data = merge $data (dict "sameAs" (slice .)) }}
+  {{ end }}
+
+  {{ with $b.telephone }}
+    {{ $data = merge $data (dict "telephone" .) }}
+  {{ end }}
+
+  {{ with $b.email }}
+    {{ $data = merge $data (dict "email" .) }}
   {{ end }}
 
   {{ with .Site.Params.legalName }}

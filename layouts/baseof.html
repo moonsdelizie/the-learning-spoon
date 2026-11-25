@@ -1,29 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ site.Language.LanguageCode | default "en-US" }}">
   <head>
-    <!-- Title -->
-    {{ if .IsHome }}
-      <title>{{ .Site.Title }}</title>
-    {{ else if (eq .Title .Site.Title ) }}
-      <title>{{ .Site.Title }}</title>
-    {{ else }}
-      <title>{{ .Title }} | {{ .Site.Title }}</title>
-    {{ end }}
-
-
     <!-- Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 
-    {{ $description := "" }}
-    {{ if .IsHome }}
-      {{ $description = .Site.Params.description }}
-    {{ else if .Description }}
-      {{ $description = .Description }}
+    <!-- Title: front matter `seoTitle` overrides the generated title -->
+    {{ with .Params.seoTitle }}
+      <title>{{ . }}</title>
     {{ else }}
-      {{ $description := .Site.Params.description }}
+      {{ if or .IsHome (eq .Title .Site.Title) }}
+        <title>{{ .Site.Title }}</title>
+      {{ else }}
+        <title>{{ .Title }} | {{ .Site.Title }}</title>
+      {{ end }}
+    {{ end }}
+
+    {{ $description := .Site.Params.description }}
+    {{ with .Description }}
+      {{ $description = . }}
     {{ end }}
     <meta name="description" content="{{ $description }}" />
+
+    <!-- Canonical & indexing -->
+    <link rel="canonical" href="{{ .Permalink }}" />
+    {{ if .Params.noindex }}
+      <meta name="robots" content="noindex, follow" />
+    {{ end }}
 
     <!-- SEO -->
     {{ partial "google_analytics.html" . }}
@@ -31,6 +34,7 @@
     {{ partial "schema.html" . }}
     {{ partial "twitter_cards.html" . }}
     {{ partial "schema/local-business.html" . }}
+    {{ partial "schema/course.html" . }}
 
 
     <!-- Favicons from https://favicon.io/ -->

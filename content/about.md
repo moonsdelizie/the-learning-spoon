@@ -1,8 +1,10 @@
 +++
 author = "Moon's Delizie"
 title = "About us"
+seoTitle = "About Our Kids' Cooking & Culture School in Murrieta, CA | The Learning Spoon Academy"
 date = "2025-09-27"
-description = "At The Learning Spoon Academy, food is our gateway to discovery."
+description = "The Learning Spoon Academy teaches kids geography, languages, math and science through hands-on cooking classes in Murrieta, CA, built for homeschool families."
+aliases = ["/post/about/"]
 tags = [
     "cooking classes",
     "homeschool",

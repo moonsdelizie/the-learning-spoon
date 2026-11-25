@@ -8,7 +8,7 @@
         <p class="text-center text-sm xl:text-start">{{ site.Params.description }}</p>
       </div>
       <div class="xl:col-span-2">
-        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">About us</h2>
+        <p class="text-primary mb-2 text-center text-lg font-bold xl:text-start">About us</p>
         <ul class="flex flex-col gap-1 text-sm">
           {{ range .Site.Menus.footer }}
             <li class="text-center xl:text-start">
@@ -18,7 +18,7 @@
         </ul>
       </div>
       <div class="xl:col-span-3">
-        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Location</h2>
+        <p class="text-primary mb-2 text-center text-lg font-bold xl:text-start">Location</p>
         <ul class="flex flex-col gap-3 text-sm">
           {{ range .Site.Params.location }}
             <li class="flex flex-col items-center gap-4 xl:flex-row">
@@ -29,7 +29,7 @@
         </ul>
       </div>
       <div class="xl:col-span-3">
-        <h2 class="text-primary mb-2 text-center text-lg font-bold xl:text-start">More Info</h2>
+        <p class="text-primary mb-2 text-center text-lg font-bold xl:text-start">More Info</p>
         {{ with .Site.Params.social }}
           <ul class="flex gap-4">
             {{ with .dribbble }}

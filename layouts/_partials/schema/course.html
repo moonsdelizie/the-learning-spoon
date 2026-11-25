@@ -1,0 +1,63 @@
+{{/* Course structured data, driven by the `course` front matter of a page. */}}
+{{ with .Params.course }}
+  {{ $b := site.Params.business }}
+  {{ $provider := dict
+    "@type" "EducationalOrganization"
+    "@id" (printf "%s#organization" site.Home.Permalink)
+    "name" site.Title
+    "sameAs" site.Home.Permalink
+  }}
+
+  {{ $offers := slice }}
+  {{ range .offers }}
+    {{ $offers = $offers | append (dict
+      "@type" "Offer"
+      "name" .name
+      "category" "Paid"
+      "price" .price
+      "priceCurrency" "USD"
+      "url" $.Permalink
+    ) }}
+  {{ end }}
+
+  {{ $instance := dict
+    "@type" "CourseInstance"
+    "courseMode" "Onsite"
+    "location" (dict
+      "@type" "Place"
+      "name" site.Title
+      "address" (dict
+        "@type" "PostalAddress"
+        "addressLocality" $b.address.locality
+        "addressRegion" $b.address.region
+        "postalCode" $b.address.postalCode
+        "addressCountry" $b.address.country
+      )
+    )
+    "courseSchedule" (dict
+      "@type" "Schedule"
+      "repeatFrequency" "P1W"
+      "byDay" $b.hours.days
+      "startTime" $b.hours.opens
+      "endTime" $b.hours.closes
+      "scheduleTimezone" "America/Los_Angeles"
+    )
+  }}
+
+  {{ $data := dict
+    "@context" "https://schema.org"
+    "@type" "Course"
+    "name" .name
+    "description" .description
+    "url" $.Permalink
+    "provider" $provider
+    "inLanguage" site.Language.LanguageCode
+    "hasCourseInstance" (slice $instance)
+    "offers" $offers
+  }}
+  {{ with .educationalLevel }}{{ $data = merge $data (dict "educationalLevel" .) }}{{ end }}
+
+  <script type="application/ld+json">
+    {{ $data | jsonify (dict "indent" "  ") | safeJS }}
+  </script>
+{{ end }}

@@ -5,7 +5,7 @@ text: "Where young chefs explore the world through food, culture, and community.
 
 buttons:
   - label: "How we work"
-    url: "/post/classes/"
+    url: "/classes/"
 
   - label: "Let's talk"
     url: "/#contact"

@@ -11,9 +11,9 @@
         {{ range .cards }}
           {{ $card := . }}
           <div class="bg-tertiary rounded-4xl px-6 py-12 xl:px-12 xl:py-16">
-            {{ with .image }}{{ partial "utilities/image" (dict "src" . "alt" $card.imagealt) }}{{ end }}
+            {{ with .image }}{{ partial "utilities/image" (dict "src" . "alt" $card.imagealt "sizes" "(min-width: 1280px) 30vw, 100vw") }}{{ end }}
             <div class="flex flex-col items-center justify-center">
-              {{ with .title }}<h2 class="text-primary mb-4 text-center text-2xl">{{ . }}</h2>{{ end }}
+              {{ with .title }}<h3 class="text-primary mb-4 text-center text-2xl">{{ . }}</h3>{{ end }}
               {{ with .text }}<p class="mb-8 text-center">{{ . }}</p>{{ end }}
               {{ with .button }}
                 {{ partial "components/button/outline" (dict "label" .label "href" .link) }}

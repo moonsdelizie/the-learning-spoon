@@ -2,7 +2,11 @@
 author = "Moon's Delizie"
 title = "Thank you!"
 date = "2025-09-27"
-description = ""
+description = "Thanks for contacting The Learning Spoon Academy. We will get back to you soon."
+aliases = ["/post/thank-you/"]
+noindex = true
+[sitemap]
+  disable = true
 +++
 
 We sincerely appreciate you taking the time to reach out to us. Your message has been successfully submitted and received.
@@ -15,9 +19,9 @@ We sincerely appreciate you taking the time to reach out to us. Your message has
 
 ## In the Meantime
 
-Feel free to explore our services and portfolio while you wait. We're excited about the possibility of working together and helping bring your ideas to life.
+Feel free to browse our [classes and schedule](/classes/) or learn more [about us](/about/) while you wait. We can't wait to cook with your young chef!
 
-Thank you again for considering Moon's Delizie for your project needs!
+Thank you again for considering The Learning Spoon Academy!
 
 ---
 

@@ -13,9 +13,9 @@
           <a class="border-primary/25 h-full rounded border" href="{{ .Permalink }}">
             <div class="aspect-video">
               {{ with .Params.image }}
-                {{ partial "utilities/image" (dict "src" . "alt" $page.Title) }}
+                {{ partial "utilities/image" (dict "src" . "alt" $page.Title "sizes" "(min-width: 1280px) 33vw, (min-width: 1024px) 50vw, 100vw") }}
               {{ else }}
-                {{ partial "utilities/image" (dict "src" "images/services-web-development.png" "alt" $page.Title) }}
+                {{ partial "utilities/image" (dict "src" "images/services-web-development.png" "alt" $page.Title "sizes" "(min-width: 1280px) 33vw, (min-width: 1024px) 50vw, 100vw") }}
               {{ end }}
             </div>
             <div class="p-6">

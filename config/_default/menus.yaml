@@ -4,15 +4,15 @@ main:
     weight: 1
 
   - name: "Classes"
-    url: "/post/classes"
+    url: "/classes/"
     weight: 2
 
   - name: "About"
-    url: "/post/about"
+    url: "/about/"
     weight: 3
 
   - name: "Homeschool Hub"
-    url: "/post/about/#homeschool-hub"
+    url: "/about/#homeschool-hub"
     weight: 4
 
 buttons:
@@ -26,9 +26,9 @@ footer:
     weight: 1
 
   - name: "Classes"
-    url: "/post/classes"
+    url: "/classes/"
     weight: 2
 
   - name: "About"
-    url: "/post/about"
+    url: "/about/"
     weight: 3
