@@ -27,6 +27,11 @@
     {{ if .Params.noindex }}
       <meta name="robots" content="noindex, follow" />
     {{ end }}
+    {{ if .IsHome }}
+      {{ with .Site.Params.googleSiteVerification }}
+        <meta name="google-site-verification" content="{{ . }}" />
+      {{ end }}
+    {{ end }}
 
     <!-- SEO -->
     {{ partial "google_analytics.html" . }}
