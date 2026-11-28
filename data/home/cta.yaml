@@ -1,8 +1,9 @@
 enable: true
 
-title: "Join Our Classes Now!"
+title: "Book a Class"
+text: "Only 4 spots per class! Tell us a little about your young chef and we'll confirm your spot within 24–48 hours."
 access_key: "ac56435f-ea7d-4b4a-b593-fb16ee9707dd"
 button:
-  label: "Send Message"
+  label: "Request a spot"
   link: "thank-you/"
   

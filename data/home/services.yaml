@@ -1,28 +1,28 @@
 enable: true
 
 title: "Our Classes"
-text: "Explore our diverse range of cooking classes designed to inspire and educate young chefs. Each class is thoughtfully crafted to combine culinary skills with cultural insights, fostering a love for cooking and global awareness."
+text: "Hands-on cooking classes that take young chefs around the world, one recipe at a time. Every class combines real cooking skills with the culture, geography and science behind the dish."
 cards:
   - image: "images/classes-options.png"
     imagealt: "Class Options badge with a wooden spoon and international flags"
     title: "Class Options"
-    text: "Our classes cater to various age groups, ensuring that every young chef finds their perfect fit. Classes are typically 2 hours long and designed for children aged 5-12."
+    text: "2-hour classes for kids aged 5–12, with a maximum of 4 kids so everyone cooks. Drop in for $60, or join 4 classes for $200 and save $40."
     button:
-      label: "Learn more"
+      label: "See prices"
       link: "/classes/#class-options"
 
   - image: "images/classes-schedule.png"
     imagealt: "Class Schedule icon of a calendar with a rainbow-colored spoon"
     title: "Class Schedule"
-    text: "Our classes follow a weekly schedule, allowing young chefs to plan their culinary adventures. Each week features a new theme, ensuring a fresh and engaging experience."
+    text: "Every Tuesday and Thursday, 10 AM to noon. A new country's cuisine every week, so there's always something new to discover."
     button:
-      label: "Learn more"
+      label: "See schedule"
       link: "/classes/#class-schedule"
 
   - image: "images/promise.png"
     imagealt: "Allergy-Friendly Promise badge with a checkmark, almond, and peanut"
     title: "Allergy-Friendly Promise"
-    text: "Our classes are designed with inclusivity in mind. We accommodate various dietary restrictions and allergies, ensuring a safe and enjoyable cooking experience for every child."
+    text: "Tell us about allergies when you book and we'll adapt the recipe. Many of our dishes have nut-free, gluten-free and dairy-free options."
     button:
-      label: "Learn more"
+      label: "Our allergy promise"
       link: "/classes/#allergy-friendly-promise"

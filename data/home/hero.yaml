@@ -1,13 +1,13 @@
 enable: true
 
-title: "The **Learning Spoon** Academy - Cooking & Culture Workshops"
-text: "Where young chefs explore the world through food, culture, and community. At The Learning Spoon Academy, we believe every recipe tells a story. Our kids' cooking classes bring together hands-on cooking, cultural studies, geography, and teamwork — designed with homeschooling families in mind. Children don't just learn how to cook; they learn how to connect with the world."
+title: "Kids' **Cooking & Culture** Classes in Murrieta"
+text: "At The Learning Spoon Academy, kids aged 5–12 cook a real recipe from a different culture every class, and learn the geography, language, math and science behind it. Small weekday classes of up to 4 kids, designed for homeschool families."
 
 buttons:
-  - label: "How we work"
+  - label: "See classes & prices"
     url: "/classes/"
 
-  - label: "Let's talk"
+  - label: "Book a class"
     url: "/#contact"
 
 image: "images/academy.png"

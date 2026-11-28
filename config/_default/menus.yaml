@@ -12,11 +12,11 @@ main:
     weight: 3
 
   - name: "Homeschool Hub"
-    url: "/about/#homeschool-hub"
+    url: "/homeschool/"
     weight: 4
 
 buttons:
-  - name: "Let's talk"
+  - name: "Book a class"
     url: "/#contact"
     weight: 5
 
@@ -32,3 +32,7 @@ footer:
   - name: "About"
     url: "/about/"
     weight: 3
+
+  - name: "Homeschool Hub"
+    url: "/homeschool/"
+    weight: 4
